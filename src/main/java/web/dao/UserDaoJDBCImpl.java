@@ -1,6 +1,5 @@
 package web.dao;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import web.model.User;
@@ -29,7 +28,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     @Override
     @Transactional
-    public void deleteById(Long id){
+    public void deleteById(Long id) {
         User user = entityManager.find(User.class, id);
         entityManager.remove(user);
     }
