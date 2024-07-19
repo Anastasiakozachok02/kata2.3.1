@@ -6,6 +6,9 @@
     <title>Change User</title>
 </head>
 <body>
+<div th:if="${error}" class="alert alert-danger" role="alert">
+    <span th:text="${error}"></span>
+</div>
 <form th:method="POST" th:action="@{change}" th:object="${user}">
     <input type="hidden" th:field="*{id}" id="id">
     <label for="name">Enter name: </label>

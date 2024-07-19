@@ -13,6 +13,7 @@
     <properties>
         <spring.version>5.3.14</spring.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+        <version.validation-api>1.1.0.Final</version.validation-api>
         <hibernate-core.version>5.6.3.Final</hibernate-core.version>
         <mysql-connector-java.version>8.0.25</mysql-connector-java.version>
         <thymeleaf-spring5.version>3.0.14.RELEASE</thymeleaf-spring5.version>
@@ -39,9 +40,21 @@
         </dependency>
 
         <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${version.validation-api}</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.2.4.Final</version>
         </dependency>
 
         <dependency>
